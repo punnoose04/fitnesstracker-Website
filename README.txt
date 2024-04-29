@@ -1,22 +1,41 @@
-THIS CODE WAS RAN ON VSCODE
+Fitness Tracker Website
 
-please make sure you have sql installed on system, change the .env file to match sql information, install node.js on your system, 
-install express.js using "npm install express" in the terminal after node.js is installed on your system,
-and install mysql2 with the command "npm install mysql2" in the terminal.
+Overview
 
-Also, do "npm install express-session"
+The Fitness Tracker Website is designed to help users monitor and enhance their physical activity routines. It provides a platform where users can log workouts, set and manage reminders, and view their workout history. The backend is developed in Node.js with Express and a MySQL database, while the frontend utilizes basic HTML and JavaScript.
 
-Please look at the schema.sql to create the same database with the same table with the same information.
-use the code in the schema inside of SQL to create the same databases used.
-PLEASE CHANGE THE .ENV FILE TO OWN SQL PASSWORD. Everything else in the .env file should be fine
+Features
 
-The HTML and formValidation.js file is in folder views
+User Authentication: Secure login and registration system to manage user accounts.
+Workout Logging: Users can log details of each workout session, including type, duration, and intensity.
+Workout History: Users can view past workouts to track progress and patterns.
+Reminder Setting: Users can set reminders for future workouts to maintain consistency.
+Reminder Management: Manage and customize workout reminders.
+Getting Started
 
-Please create the express.js server by writing "node server.js" in the terminal
-and please go to 
-http://localhost:3000 in google chrome to see website because it is run on port 3000. 
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-The table "users" in database signin_information should have 2 entries. 
-The email and password should be test@gmail.com and testpassword123. and test and test.
+Prerequisites
 
-These values were used to test the use cases.
+Node.js
+npm (Node Package Manager)
+MySQL
+Installation
+
+Clone the repository:
+Use the link to your GitHub repository to clone the project to your local machine.
+Install the dependencies:
+Run the npm install command to install all necessary dependencies.
+Set up the MySQL database:
+Ensure MySQL is installed and running on your system. Create a database named fitness_tracker and import the provided schema.
+Configure your environment variables:
+Copy the .env.example file to .env and update it with your database connection settings and any other configurations.
+Start the server:
+Use the npm start command to start the Node.js server on localhost:3000.
+Usage
+
+Once the server is running, navigate to localhost:3000 in your web browser to access the Fitness Tracker Website. From there, you can register a new account or login if you already have one. After logging in, you can start logging workouts, setting reminders, and reviewing your workout history.
+
+Running Tests
+
+To run tests, use the npm test command. This project uses Jest and Supertest for backend testing.
