@@ -1,0 +1,134 @@
+/* Base colors */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333333; /* softer than black for reading comfort */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #90ee90;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #3cb371; /* medium sea green */
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background-color: #4682b4; /* steel blue */
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+form label {
+    padding-top: 10px;
+}
+
+form input, form select, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 95%;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #90ee90;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #004d80; /* navy blue */
+    color: white;
+}
+
+.log-date {
+    background: #004d80; /* navy blue */
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+.log-details p {
+    background: #f4f4f9;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.log-details {
+    display: none; 
+}
+
+.reminder-panel {
+    display: none; /* Start hidden */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 250px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+.reminder-panel h3 {
+    margin-top: 0;
+    color: #333;
+}
+.reminder-panel ul {
+    list-style: none;
+    padding: 0;
+}
+.reminder-panel li {
+    margin-top: 8px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="fitnessmainpagestyle.css">
+</head>
+<body>
+    <header>
+        <h1>Fitness Tracker</h1>
+    </header>
+
+    <div id="reminderPanel" class="reminder-panel">
+        <h3>Reminders</h3>
+        <ul id="reminderList"></ul>
+    </div>
+
+    <nav>
+        <a href="#log">Log Workout</a>
+        <a href="#history">View History</a>
+        <a href="reminder.html">Set Reminder</a> 
+        <a href="#" onclick="signOut()">Sign Out</a>
+    </nav>
+    <div class="container" id="log">
+        <h2>Log Your Workout</h2>
+    
+        <div id="message-container" style="display:none; color: lightgreen;"></div>
+        <p id="error-message" style="color: red;"></p>
+        <div id="duplicate" style="color: red; display: none;"></div>
+        <form onsubmit="submitWorkout(event)">
+            <div class="date-selection">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div id="workoutsContainer">
+                <!-- Dynamically add workouts -->
+            </div>
+            <button type="button" onclick="addWorkoutForm()">Add Workout</button>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="container" id="history">
+        <h2>Workout History</h2>
+        <div id="workoutLogs"></div>
+    </div>
+    <script src="workoutForm.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <title>Reminder Application</title>
+</head>
+<body>
+    <div class="container">
+        <div class="time-section">
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required>
+        </div>
+        <div class="date-section">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div class="reminder-message-section">
+            <label for="message">Reminder Message:</label>
+            <input type="text" id="message" name="message" placeholder="Enter your reminder message" required>
+        </div>
+       <div id="error-message" style="color: red; display: none;">Please fill all required fields.</div>
+        <div class="reminder-section">
+            <button onclick="setReminder()">Set Reminder</button>
+        </div>
+    </div>
+    <script src="reminderForm.js"></script>
+</body>
+</html>

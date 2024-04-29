@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Fitness Tracker</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #70f570 10%, #49c628 90%);
+            color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 960px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1s ease-out;
+        }
+        .header {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            animation: fadeIn 1.2s ease-out;
+        }
+        input[type=text], input[type=password] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            animation: fadeIn 1.4s ease-out;
+        }
+        button {
+            width: 100%;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            animation: fadeIn 1.6s ease-out;
+        }
+        button:hover {
+            background-color: #45a049;
+            animation: none;
+        }
+        .signup-link {
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+            animation: fadeIn 2s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Create Your Account</h1>
+        </div>
+        <div id="sign-up">
+            <h2>Sign Up</h2>
+            <input type="text" id="email" placeholder="Enter Email">
+            <input type="password" id="password" placeholder="Create Password">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+            <button onclick="accountCreation()">Create Account</button>
+            <span id="passwordMismatch" style="color: red; display: none;">Passwords do not match</span>
+            <span id="missingFields" style="color: red; display: none;">Please fill all fields</span>
+            <h2 id="successfulSignup" style="color: lightgreen; display: none;">Successful Sign up!</h2>
+            <a href="index.html" class="signup-link">Already have an account? Sign in here</a>
+        </div>
+    </div>
+    <script src="validateForm.js"></script>
+</body>
+</html>
